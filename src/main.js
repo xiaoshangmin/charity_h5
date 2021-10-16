@@ -13,7 +13,7 @@ axios.defaults.timeout = 10000;
 Vue.prototype.$http = axios
 Vue.config.productionTip = false
 
-axios.defaults.baseURL = 'http://xsm.fun.com/'
+axios.defaults.baseURL = 'http://charity.wowyou.cc/'
 
 router.beforeEach((to,from,next)=>{
   if(to.meta.title){
