@@ -1,6 +1,6 @@
 module.exports = {
     productionSourceMap: false,
-    publicPath: '/',
+    publicPath: '/html',
     // lintOnSave: false, //是否开启eslint
 
     devServer: {
