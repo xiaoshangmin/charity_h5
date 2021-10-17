@@ -18,7 +18,6 @@
         <van-list
           v-model="loading"
           :finished="finished"
-          finished-text="没有更多了"
           @load="onLoad"
         >
           <div
@@ -55,7 +54,7 @@ export default {
       p: 0,
       ps: 10,
       levelId: 0,
-      no_more: "暂无数据",
+      no_more: "没有更多了",
       tabs: [],
       list: [],
       loading: false,
@@ -72,7 +71,6 @@ export default {
       this.getUserList();
     },
     toDetail(uid) {
-      console.log(uid);
       this.$router.push({
         path: "detail",
         query: { uid:uid },
@@ -81,7 +79,6 @@ export default {
     getLevelList() {
       this.$http.post("/api/v1/charity/level").then((res) => {
         res = res.data;
-        console.log(res);
         if (res.code != 200) {
           this.$toast(res.error);
           return;
@@ -103,7 +100,7 @@ export default {
           return;
         }
         if (res.data.length == 0) {
-          this.no_more = "暂无数据";
+          this.no_more = "没有更多了";
         }
         if (this.p == 0) {
           this.list = res.data.list;
@@ -121,7 +118,6 @@ export default {
     },
     onLoad() {
       this.p++;
-      console.log(this.p);
       this.getUserList();
     },
   },

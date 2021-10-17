@@ -21,7 +21,7 @@
     <div class="enterprise-info">
       <div class="label">企业/机构介绍</div>
       <div class="info">
-        {{ userInfo.content }}
+        <span v-html="userInfo.content"></span> 
       </div>
     </div>
   </div>
