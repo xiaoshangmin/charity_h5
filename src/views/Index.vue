@@ -2,7 +2,6 @@
   <div>
     <van-tabs
       v-model="active"
-      scrollspy
       sticky
       animated
       background="#F2F4F6"
