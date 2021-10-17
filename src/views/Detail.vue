@@ -31,7 +31,9 @@
 export default {
   data() {
     return {
-      userInfo: {},
+      userInfo: {
+        charityLevel:{},
+      },
       uid: 0,
     };
   },
