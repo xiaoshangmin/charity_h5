@@ -17,6 +17,7 @@
         <van-list
           v-model="loading"
           :finished="finished"
+          :finished-text="no_more"
           @load="onLoad"
         >
           <div
