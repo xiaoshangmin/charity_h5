@@ -28,7 +28,7 @@
           >
             <div class="thumb">
               <van-image
-                src="http://www.lgcsh.cn/bacsh/download.do?p=absolutePath&fileName=PICTURE/lingguoqiang.JPG"
+                :src="user.avatar"
               />
             </div>
             <div class="content">
