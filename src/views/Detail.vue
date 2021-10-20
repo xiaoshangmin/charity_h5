@@ -69,7 +69,7 @@ export default {
   width: 25%;
   flex: none;
   margin: 10px 16px;
-  border: 1px solid #e7e7e7;
+  /* border: 1px solid #e7e7e7; */
   border-radius: 5px;
 }
 .content {

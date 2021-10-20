@@ -130,12 +130,11 @@ export default {
   display: flex;
   width: 100%;
   padding: 10px 16px;
-  line-height: 25px;
 }
 .thumb {
   width: 25%;
   flex: none;
-  border: 1px solid #e7e7e7;
+  /* border: 1px solid #e7e7e7; */
   border-radius: 5px;
 }
 .content {
@@ -143,6 +142,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  line-height: 25px;
   width: 60%;
   margin-left: 10px;
 }
