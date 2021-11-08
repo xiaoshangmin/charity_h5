@@ -67,7 +67,9 @@ export default {
   methods: {
     onClick(name) {
       this.levelId = name;
-      this.p = 0;
+      this.p = 1; 
+      this.finished = false;
+      this.list = [];
       this.getUserList();
     },
     toDetail(uid) {
@@ -93,6 +95,7 @@ export default {
         pageSize: this.ps,
         id: this.levelId,
       };
+      this.loading = true;
       this.$http.post("/api/v1/charity/user", data).then((res) => {
         res = res.data;
         if (res.code != 200) {
@@ -113,11 +116,11 @@ export default {
         this.loading = false;
         if (res.data.totalPage <= this.p) {
           this.finished = true;
-        }
+        }  
       });
     },
     onLoad() {
-      this.p++;
+      ++this.p;
       this.getUserList();
     },
   },
