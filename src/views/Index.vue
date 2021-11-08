@@ -68,8 +68,8 @@ export default {
     onClick(name) {
       this.levelId = name;
       this.p = 1; 
-      this.finished = false;
       this.list = [];
+      this.finished = false; 
       this.getUserList();
     },
     toDetail(uid) {
@@ -102,19 +102,16 @@ export default {
           this.$toast(res.error);
           return;
         }
-        if (res.data.length == 0) {
-          this.no_more = "没有更多了";
-        }
-        if (this.p == 0) {
-          this.list = res.data.list;
-        } else {
-          res.data.list.map((item) => {
-            this.list.push(item);
-          });
-        }
+    
+        
+        res.data.list.map((item) => {
+          this.list.push(item);
+        });
+ 
         // 加载状态结束
         this.loading = false;
         if (res.data.totalPage <= this.p) {
+          this.no_more = "没有更多了";
           this.finished = true;
         }  
       });
